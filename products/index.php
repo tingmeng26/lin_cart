@@ -44,13 +44,17 @@ include(ROOT_DIR.'/do/getTypeList.php');
             <div class="col-md-4 col-sm-6 col-xs-12 cards">
               <div class="whitecard-none">
                 <div class="products-top">
-                  <a href="<?php echo empty($row['subtype'][0]['subtypeId']) ? './products/subtype.php' : './products/subtype.php?id=' . $row['subtype'][0]['subtypeId'] ?>">
+                  
                     <div><img class="products-top-img" src="<?php echo $row['pic'] ?>">
                     <span class="products-top-tittle " ><?php echo $row['name'] ?></span></div>
-                  </a>
+                  
                 </div>
                 <hr class="green-hr">
-                <i class="fas fa-shopping-cart fa-3x"></i>
+                <a href="<?php echo empty($row['subtype'][0]['subtypeId']) ? './products/subtype.php' : './products/subtype.php?id=' . $row['subtype'][0]['subtypeId'] ?>">
+                <div><span class="fas fa-book-reader fa-3x"></span>詳細資料
+                </a>
+                <span class="fas fa-shopping-cart fa-3x"></span>加入購物車
+                </div>
               </div>
             </div>
           <?php } ?>
