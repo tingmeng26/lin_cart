@@ -1,0 +1,17 @@
+RewriteEngine On
+#Header always append X-Frame-Options SAMEORIGIN
+
+
+RewriteCond %{REQUEST_FILENAME} -f [NC,OR]
+RewriteCond %{REQUEST_FILENAME} -d [NC,OR]
+RewriteCond %{REQUEST_URI} ^.*(.css|.js|.gif|.png|.jpg|.jpeg)$ [NC]
+
+
+
+RewriteRule .* - [S=99]
+
+
+
+
+RewriteRule ^([a-zA-Z0-9\-\_]+)\.html$ $1.php
+
