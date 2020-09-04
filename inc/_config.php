@@ -208,7 +208,7 @@ if (version_compare(PHP_VERSION, '5.1.2', '>=')) {
     spl_autoload_register('incautoload');
   }
 } else {
-  function __autoload($classname)
+  function autoload($classname)
   {
     @incautoload($classname);
   }
